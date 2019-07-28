@@ -22,7 +22,7 @@ import java.util.Map;
 // 주택금융 공급 현황 관련 API
 //-------------------------------------------------*/
 @RestController
-@RequestMapping(value="housingFinance")
+@RequestMapping(value="api")
 public class HousingFinanceController {
 
     private final BankService             bankService;
@@ -50,7 +50,7 @@ public class HousingFinanceController {
     //------------------------------------------------------------
     // 주택 금융 공급 기관(은행) 목록 조회
     //------------------------------------------------------------
-    @GetMapping("/banks")
+    @GetMapping("/banks/findAll")
     public ResponseEntity getBanks() {
         List<Bank> result = bankService.getBanks();
 
